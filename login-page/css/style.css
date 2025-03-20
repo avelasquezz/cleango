@@ -1,0 +1,183 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  width: 100%;
+  height: 100vh;
+
+  font-family: 'open sans';
+}
+
+/* Main */
+main {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+
+  color: #1e1b29;
+}
+
+main .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 30px;
+  padding: 10%;
+
+  background: rgb(238,174,202);
+  background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(175,148,233,1) 100%);
+}
+
+main .left p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+main .left h1 {
+  font-size: 4rem;
+  font-weight: 700;
+
+  font-family: 'poppins';
+}
+
+main .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10%;
+}
+
+main .right #login-form, 
+main .right #register-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  gap: 40px;
+
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+main .right #login-form form, 
+main .right #register-form form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .right #login-form form > *:not(:first-child, input),
+main .right #register-form form > *:not(:first-child, input) {
+  margin-top: 25px;
+}
+
+main .right #login-form form > *:not(:last-child, input),
+main .right #register-form form > *:not(:last-child, input) {
+  margin-bottom: 10px;
+}
+
+main .right #login-form form input,
+main .right #register-form form input {
+  width: 70%;
+  height: 30px;
+
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  font-size: 1rem;
+}
+
+main .right #login-form form button,
+main .right #register-form form button {
+  width: 70%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 5px;
+  
+  padding: 10px;
+
+  background-color: #af94e9;
+  color: #fff;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+main .right #login-form form button:hover,
+main .right #register-form form button:hover {
+  background-color: #846fb0;
+}
+
+main .right #login-form p span,
+main .right #register-form p span {
+  color: #af94e9;
+  
+  cursor: pointer;
+
+  transition: color 0.3s;
+}
+
+main .right #login-form p span:hover,
+main .right #register-form p span:hover {
+  text-decoration: underline;
+  color: #846fb0;
+}
+
+.hidden {
+  position: absolute; 
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  transform: translateX(-100px);
+  
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  main {
+    height: 100vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+  }
+}
+
+@media (max-width: 600px) {
+  main .left h1 {
+    font-size: 3rem;
+  }
+
+  main .left p {
+    font-size: 1rem;
+  }
+}
