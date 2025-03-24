@@ -10,6 +10,8 @@ noHaveAccountButton.addEventListener('click', function () {
   
   loginForm.setAttribute("aria-hidden", "true");
   registerForm.setAttribute("aria-hidden", "false");
+
+  document.title = "CleanGo | Register"
 });
 
 haveAccountButton.addEventListener('click', function () {
@@ -18,4 +20,6 @@ haveAccountButton.addEventListener('click', function () {
 
   registerForm.setAttribute("aria-hidden", "true");
   loginForm.setAttribute("aria-hidden", "false");
+
+  document.title = "CleanGo | Login"
 });
