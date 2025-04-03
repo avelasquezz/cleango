@@ -106,6 +106,10 @@ main .right #register-form form input {
   font-size: 1rem;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
 main .right #login-form form button,
 main .right #register-form form button {
   width: 70%;
